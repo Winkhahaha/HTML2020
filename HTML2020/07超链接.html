@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接</title>
+</head>
+<body>
+<!--超链接可以跳转到其他页面
+超链接a也是行内元素,在a标签中可以嵌套除它自身外的任何元素-->
+<a href="https://www.baidu.com">外部百度链接</a>
+<a href="01.html">内部链接 </a>
+
+<!--_blank在当前页面打开超链接
+    _self默认 当前页面中打开超链接-->
+<a href="https://www.baidu.com" target="_blank">外部百度链接</a>
+
+<!--设置为,回底部
+    可以跳转到指定位置,只要将href属性设置为#目标元素id-->
+<a href="#top">去底部</a>
+
+<!--将href属性设置为#,转到顶部位置
+    id 唯一不重复的属性,每一个标签都可以添加一个id属性,页面中不能出现重复的id属性-->
+<a href="#" id="top">回到顶部</a>
+
+<!--在开发中可以将#作为超链接路径的站位符-->
+<a href="#">这又是一个超链接</a>
+<!--此时点击超链接什么也不会发生-->
+<a href="javascript:;"></a>
+</body>
+</html>

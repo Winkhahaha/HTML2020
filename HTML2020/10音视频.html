@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--audio 引入一个外部的音频文件
+默认情况下不允许用户控制播放停止
+属性:controls表示是否允许用户控制
+    autoplay 是否自动播放,基本不用了
+    loop 循环播放-->
+<audio src="./mp3/1.mp3" controls loop></audio>
+<br/>
+<!--还可以通过source指定文件路径-->
+<audio controls>
+    对不起!浏览器不支持该播放组件!
+<!--    指定多个文件格式,免得不支持-->
+    <source src="mp3/1.mp3">
+    <source src="mp3/1.mp3">
+</audio>
+
+<!--<embed src="mp3/1.mp3" type="audio/mp3" width="200" height="100">-->
+
+
+<!--使用video向网页引入视频文件
+    使用方式和audio基本一样-->
+<video controls>
+    <source src="mp3/1.mp4">
+</video>
+</body>
+</html>
