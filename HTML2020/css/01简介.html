@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--    2.将样式编写到head的style标签中
+            可同时为多个相同标签设置样式,一次修改处处改变,
+            不会影响已经内部内联style的p标签,
+            样式不能跨页面使用-->
+    <style>
+        p {
+            color: orange;
+            font-size: 30px
+        }
+    </style>
+
+<!--    3.外部样式表
+        可以将css样式编写到一个外部的css文件,
+        然后通过link标签来引入外部的css文件,
+        意味着只要想使用这些样式的网页都可以使用,使样式可以在不同页面之间进行复用,
+        将样式编写到外部的css文件中,可以使用到浏览器的缓存机制,从而加快网页的加载速度,提高用户体验-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!--网页实际上是一个多层结构,通过css可以分别为网页的每一层来设置样式
+最终我们看到的是网页最上面的一层
+css用来设置网页中元素的样式
+
+
+         使用css来修改元素样式
+        1.在标签内部通过style属性设置(内联样式,行内样式)
+          维护麻烦,当样式发生变化时得一个一个修改,开发时不使用-->
+<p style="color: #ff0008; font-size: 30px">锄禾日当午</p>
+
+<p>汗滴禾下土</p>
+</body>
+</html>

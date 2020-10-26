@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*
+        样式的继承,为一个元素设置的样式也会应用到后代元素
+               比如:背景相关,布局相关等这些样式不会被继承
+        */
+        p {
+            color: red;
+        }
+
+        div {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<p>
+    我是一个p元素
+    <span>我是p元素中的span</span>
+</p>
+
+<div>我是div
+    <span>我是div中span
+<em>我是span中em</em>
+</span>
+</div>
+
+</body>
+</html>

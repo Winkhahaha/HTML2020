@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            /*
+                长度单位:
+                    像素
+                    百分比:设置当前属性相对其父元素属性的百分比,可以使子元素随父元素改变而改变
+                    em:相对于元素的字体大小来计算的
+                        1em = 1font-size
+                        em会根据字体的大小的改变而改变
+                    rem:相对于根元素的字体大小来计算:html{}
+            */
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+        }
+
+        .box2 {
+            width: 50%;
+            height: 50%;
+            background-color: blue;
+        }
+
+        .box3 {
+            font-size: 20px;
+            width: 10em;
+            height: 10em;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+
+</div>
+
+<div class="box3"></div>
+</body>
+</html>

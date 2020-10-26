@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        /*
+            :link用来表示没访问过的链接(正常的链接)
+        */
+        a:link {
+            color: red;
+        }
+
+        /*
+        :visited用来表示访问过的链接
+        由于隐私的原因,所以visited这个伪类只能修改链接的颜色
+        */
+        a:visited {
+            /*font-size: 50px;*/
+            color: orangered;
+        }
+
+        /*
+            :hover 用来表示鼠标移入的状态
+        */
+        a:hover {
+            color: blue;
+            font-size: 20px;
+        }
+
+        /*
+            :active 用来表示鼠标点击的状态
+        */
+        a:active {
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<a href="https://www.baidu.com">访问过</a><br/>
+
+<a href="https://www.baidu.com">未访问</a><br/>
+</body>
+</html>

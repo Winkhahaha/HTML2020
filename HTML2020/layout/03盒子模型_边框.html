@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+
+            /*
+                边框,边框属于盒子的边缘,边框里面属于盒子内部,出了边框都是盒子外部
+                设置边框至少设置三个样式,边框的大小会影响盒子的大小
+                    边框的宽度 border-width可以用来指定四个方向的边框的宽度
+                        - 四个值:上右下左
+                        - 还可以top/right/bottom.leftb ,用来单独指定某一个边的宽度
+                    边框的颜色 border-color
+                    边框的样式 border-style
+             */
+            border-width: 10px;
+            /*border-top-width: 10px;*/
+
+            border-color: purple red blue brown;
+            /*border-top-color: #ffffff;*/
+
+            border-style: solid;
+            /*border-top-style: dashed;*/
+
+        }
+    </style>
+</head>
+<body>
+<div class="box1">div1</div>
+</body>
+</html>
