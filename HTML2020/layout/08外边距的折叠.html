@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1, .box2 {
+            width: 200px;
+            height: 200px;
+        }
+
+        /*
+            垂直外边距的重叠
+                 - 相邻的垂直方向的外边距会发生重叠现象
+                 - 兄弟元素间的相邻垂直外边距会取两者之间的较大值(开发基本不处理)
+                 - 父子元素
+         */
+        .box1 {
+            background-color: purple;
+            /*
+                设置一个下外边距
+             */
+            margin-bottom: 100px;
+        }
+
+        .box2 {
+            background-color: green;
+            /*
+                设置一个上外边距
+             */
+            margin-top: 100px;
+        }
+
+        /*
+            父子元素间相邻外边距,子元素的会传递给父元素(上外边距)
+         */
+
+        .box3 {
+            background-color: slategray;
+            width: 200px;
+            height: 200px;
+            /*border-top: 1px red solid;*/
+        }
+
+        .box4 {
+            background-color: darkgreen;
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+
+<div class="box3">
+    <div class="box4"></div>
+</div>
+</body>
+</html>

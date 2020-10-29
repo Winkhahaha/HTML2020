@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body {
+            background-color: #bbffaa;
+        }
+
+        a {
+            /*去除下划线*/
+            text-decoration: none;
+        }
+
+        /*设置容器的样式*/
+        .news-wrapper {
+            width: 300px;
+            height: 358px;
+            background-color: white;
+            margin: 50px auto;
+            /*设置上边框*/
+            border-top: 1px solid #dddddd;
+        }
+
+        /*设置news-title*/
+        .news-title {
+            /*将h2转换为行内块元素*/
+            display: inline-block;
+            height: 30px;
+            border-top: 1px red solid;
+            margin-top: -1px;
+            padding-top: 10px;
+        }
+
+        /*设置title和超链接的样式*/
+        .news-title a {
+            color: #40406B;
+            font-weight: bold;
+        }
+
+        /*设置图片容器高度*/
+        .news-img {
+            height: 150px;
+        }
+
+        /*设置图片文字效果*/
+        .news-img .img-title {
+            /*设置字体颜色*/
+            color: #ffffff;
+            margin-top: -30px;
+            font-weight: bold;
+            padding-left: 30px;
+        }
+
+        /*设置新闻列表*/
+        .news-list {
+            margin-top: 20px;
+            /*padding-left: 14px;*/
+        }
+
+        /*设置li*/
+        .news-list li {
+            /*设置下外边距*/
+            margin-bottom: 17px;
+        }
+
+        /*设置li中的文字*/
+        .news-list li a {
+            font-size: 14px;
+            color: #40406B;
+        }
+
+        /*超链接鼠标移入的效果*/
+        .news-list li a:hover {
+            color: darkviolet;
+        }
+
+        /*通过before伪元素为每一个li添加项目符号*/
+        .news-list li::before {
+            content: '♥';
+            color: red;
+            margin-left: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="news-wrapper">
+    <h2 class="news-title">
+        <a href="#">体育</a>
+    </h2>
+
+    <div class="news-img">
+        <a href="#">
+            <img src="img/03/1.jpeg" alt="费德勒">
+            <h3 class="img-title">
+                费德勒输了 不满发挥
+            </h3>
+        </a>
+    </div>
+
+    <!--    新闻列表-->
+    <ul class="news-list">
+        <li>
+            <a href="#">乔治:我爱LA 喜欢和LBJ一起打球</a>
+        </li>
+        <li>
+            <a href="#">格林:3年前降薪就在等KD 特制T恤嘲讽LBJ</a>
+        </li>
+        <li>
+            <a href="#">塔克4000双鞋让保罗羡慕嫉妒 乔丹被震惊</a>
+        </li>
+        <li>
+            <a href="#">CBA下季新赛制:常规赛4组循环 增至46轮</a>
+        </li>
+    </ul>
+
+</div>
+
+</body>
+</html>

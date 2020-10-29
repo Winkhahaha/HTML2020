@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            font-size: 50px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bbffaa;
+
+            float: left;
+        }
+
+        .box2{
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+
+            float: right;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+
+            /*由于box1的浮动 导致box3位置上移
+                不希望某个元素因为其他元素的浮动而改变位置
+                    可以通过clear属性清除浮动元素对当前元素产生的影响
+                        清除左侧浮动带来的影响
+
+                原理:设置清除浮动以后 我们浏览器会自动为元素添加上边距,使其不受其他元素影响
+                    both:清除影响最大的
+            */
+            /*clear: left;*/
+            /*clear: right;*/
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3</div>
+</body>
+</html>
