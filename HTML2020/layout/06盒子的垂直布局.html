@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .outer {
+            background-color: brown;
+            height: 600px;
+            /*
+                默认情况下父元素的高度被内容撑开
+             */
+        }
+
+        .inner {
+            width: 100px;
+            height: 200px;
+            background-color: #ff0008;
+            margin-bottom: 100px;
+
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color:purple;
+            /*
+            使用overflow属性设置父元素处理溢出的子元素
+            visible 默认值 溢出
+            hidden 溢出内容将会 被裁减不显示
+            scroll 生成滚动条
+             */
+            overflow: hidden;
+        }
+
+        .box2{
+            width: 100px;
+            height: 400px;
+            background-color:orange;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+
+    <div class="inner"></div>
+</div>
+
+<div class="box1">
+
+    <div class="box2"></div>
+</div>
+</body>
+</html>

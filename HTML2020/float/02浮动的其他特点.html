@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+
+            /*浮动元素不会盖住文字,文字会自动环绕在浮动元素周围
+            所以我们利用浮动来设置文字环绕图片的效果
+            */
+            float: left;
+        }
+
+        .box2{
+            background-color: darkviolet;
+            float: left;
+            /*
+            元素設置浮动后从文档流脱离出去,脱离后,元素的一些特点也会发生变化
+                - 脱离文档流特点:
+                    块元素
+                        块元素不独占页面一行
+                        脱离文档流以后,块元素的宽度和高度默认被内容撑开
+                    行内元素
+                        脱离文档流以后会变成块元素,特点和块元素一样
+
+                   :脱离文档流后,不需要区分行内和块元素了
+            */
+        }
+
+        .box3{
+            background-color: #bbffaa;
+        }
+
+        .s1{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<span class="s1">我是一个span</span>
+<div class="box1"></div>
+<div class="box2">hello</div>
+<div class="box3">hello</div>
+<p>
+    哈啊哈哈哈啊哈哈哈哈啊哈啊哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈啊哈哈啊哈哈哈哈哈哈
+    好好好呵呵呵好好好呵呵呵好好好呵呵呵好好好呵呵呵好好好呵呵呵好好好呵呵呵或或或或或或或或或或或或或或或或或或或或或或或或或或或或
+    突突突突突突拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖
+</p>
+</body>
+</html>

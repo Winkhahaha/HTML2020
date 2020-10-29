@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            border: 10px red solid;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 300px;
+            background-color: #bbffaa;
+            float: left;
+
+        }
+
+        .box3{
+            clear: both;
+        }
+
+        .box1::after{
+            content: '';
+            clear: both;
+            /*after行内变成块元素*/
+            display: block;
+        }
+
+        /*同时解决高度塌陷和外边距重叠问题
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        */
+    </style>
+</head>
+<body>
+<div class="box1 clearfix">
+    <div class="box2"></div>
+<!--    <div class="box3"></div>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #9400d3;
+            /*border: 10px yellow solid;*/
+
+            /*outlin用来设置元素的轮廓线,用法和border一样
+            轮廓和边框不同点"轮廓不会影响到可见框的大小"
+            */
+            /*outline: 10px yellow solid;*/
+
+            /*box-shadow: 用来设置元素阴影效果;
+            阴影的偏移量:1.水平偏移量 正右负左
+                       2.垂直偏移量 正值向下移动 负值向上
+                       3.阴影的模糊范围
+            */
+            box-shadow: 20px 20px 20px rgba(148, 0, 211, .6);
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            /*设置圆角 设置的是圆的半径大小
+                可以指定四个角的圆弧半径
+            */
+            /*border-radius: 10px;*/
+
+            /*将元素设置为圆形*/
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+
+<span>hello</span>
+</body>
+</html>
