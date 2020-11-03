@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 50%;
+            border: 1px solid black;
+            /*border-spacing 边框间的距离*/
+            /*border-spacing: 10px;*/
+
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            height: 50px;
+            /*默认情况下元素在td中垂直居中
+                可以通过以下进行修改(只会影响文字内容)
+            */
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        /*如果表格中没有使用tbody而是直接使用tr,那么浏览器自动创建tbody并将所有tr放进去
+            因此tr不是tbody的子元素
+        */
+        table tr:nth-child(odd) {
+            background-color: #bbffaa;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+</div>
+<table>
+    <tr>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>年龄</td>
+        <td>地址</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>张三</td>
+        <td>男</td>
+        <td>21</td>
+        <td>陕西</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>李四</td>
+        <td>男</td>
+        <td>21</td>
+        <td>陕西</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>王五</td>
+        <td>男</td>
+        <td>21</td>
+        <td>陕西</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>马六</td>
+        <td>男</td>
+        <td>21</td>
+        <td>陕西</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>赵七</td>
+        <td>男</td>
+        <td>21</td>
+        <td>陕西</td>
+    </tr>
+</table>
+</body>
+</html>
