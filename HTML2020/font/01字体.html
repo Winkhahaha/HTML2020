@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        /*可以将服务器中的字体直接提供给用户使用*/
+        @font-face {
+            /*指定字体名字*/
+            font-family: '';
+            /*服务器中字体的路径*/
+            src: url("..");
+        }
+
+        p {
+            color: darkviolet;
+            font-size: 30px;
+            /*字体格式
+            font-family可以同时指定使用多个字体,多个字体间逗号隔开
+                字体生效时优先使用第一个,第一个无法使用则使用第二个
+            */
+            font-family: cursive;
+        }
+
+    </style>
+</head>
+<body>
+<p>
+    今天天气真不错,hello
+</p>
+</body>
+</html>

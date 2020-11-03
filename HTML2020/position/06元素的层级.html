@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 60px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            position: absolute;
+            /*
+            对于我们开启定位的元素,可以通过z-index属性指定元素的层级
+                z-index需要一个整数作为参数,值越大的元素的层级越高
+                    元素的层级越高越优先显示
+
+                    祖先的元素的层级再高也不会盖住后代元素
+             */
+            /*z-index: 1;*/
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255,0,0,.3);
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: silver;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3
+<div class="box4">4</div>
+</div>
+
+</body>
+</html>
