@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer {
+            width: 500px;
+            margin: 50px auto;
+            padding: 10px;
+            background-color: #bbffaa;
+            /*设置文本居中*/
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 点击按钮切换图片
+            // 获取两个按钮
+
+            // 分别为两个按钮绑定单击事件
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+
+            // 切换图片就是修改img->src属性
+            var img = document.getElementsByTagName("img")[0];
+            // 创建一个数组保存图片路径
+            var imgArr = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg"];
+            // 创建临时变量保存当前图片索引
+            var index = 0;
+
+            // 设置提示文字
+            var info = document.getElementById("info");
+            info.innerHTML = (index + 1) + " /  " + imgArr.length
+
+            prev.onclick = function () {
+                // alert("上一张")
+                index--
+                if (index < 0) {
+                    // index = 0;
+                    index = imgArr.length - 1;
+                }
+                img.src = imgArr[index];
+                // 点击按钮以后重新设置提示信息
+                info.innerHTML = (index + 1) + " /  " + imgArr.length
+            }
+
+            next.onclick = function () {
+                // alert("下一张")
+                index++
+                if (index > imgArr.length - 1) {
+                    // index = imgArr.length - 1;
+                    index = 0;
+                }
+                img.src = imgArr[index]
+                // 点击按钮以后重新设置提示信息
+                info.innerHTML = (index + 1) + " /  " + imgArr.length
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="outer">
+    <p id="info"></p>
+    <img src="img/1.jpg" alt="冰棍"/>
+    <button id="prev">上一张</button>
+    <button id="next">下一张</button>
+</div>
+</body>
+</html>

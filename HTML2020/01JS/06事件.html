@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--处理:在事件对应属性中设置一些js代码,代码执行js事件-->
+<button id="btn" onclick="alert('别点我!')">我是一个按钮</button>
+<script type="text/javascript">
+    /* 事件:用户和浏览器的交互行为
+        可以为按钮的对应事件绑定处理函数来响应事件
+    * */
+    var btn = document.getElementById("btn")
+    console.log(btn)
+
+    // 绑定处理函数,单击事件
+    // 为单击事件绑定的函数,称为单击响应函数
+    btn.onclick = function () {
+        alert('哈哈哈!')
+    }
+</script>
+</body>
+</html>

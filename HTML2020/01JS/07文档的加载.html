@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+       /*
+           浏览器在加载一个页面的时候是自上而下
+            在代码执行时,页面还没有加载,页面没有加载DOM对象也没有加载
+            会导致无法获取到DOM对象
+        */
+       // var btn = document.getElementById("btn")
+       // btn.onclick = function () {
+       //     alert('哈哈哈!')
+       // }
+
+// onload事件会在整个页面加载完成之后才触发,该事件对应的响应函数将会在页面加载完成之后执行
+// 这样可以确保所有的dom对象加载完毕
+        window.onload = function () {
+
+            /*
+                浏览器在加载一个页面的时候是自上而下
+             */
+            var btn = document.getElementById("btn")
+            btn.onclick = function () {
+                alert('哈哈哈!')
+            }
+        }
+    </script>
+</head>
+<body>
+<!--处理:在事件对应属性中设置一些js代码,代码执行js事件-->
+<button id="btn">我是一个按钮</button>
+
+</body>
+</html>
