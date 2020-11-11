@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var box1 = document.getElementById("box1");
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function () {
+                /*
+                    获取样式表样式
+                    box1.currentStyle.width
+                    用来读取当前元素正在显示的样式,如果未设置,则获取默认值
+                    但是兼容性不好
+                  */
+                // alert(box1.currentStyle.width);
+
+                // 要修改的元素 伪元素
+                // 获取的样式没有设置,则会获取到真实的值,而不是默认值,没有设置width,不会获取到auto,而是长度
+                // var obj = getComputedStyle(box1, null);
+                // alert(obj.width)
+                alert(getStyle(box1, "width"));
+            }
+        }
+
+        /* 定义一个函数,用来获取指定元素的当前的样式
+         obj 要获取样式的元素
+         name 要获取的样式名
+         getComputedStyle和currentStyle都是只读方法
+         */
+        function getStyle(obj, name) {
+            // if (window.getComputedStyle) {
+            //     // 正常浏览器
+            //     return getComputedStyle(obj, null)[name];
+            // } else {
+            //     // IE8
+            //     return obj.currentStyle[name];
+            // }
+            return window.getComputedStyle ? getComputedStyle(obj, null)[name] : obj.currentStyle[name];
+            // if (obj.currentStyle) {
+            //     return obj.currentStyle[name];
+            // } else {
+            //     return getComputedStyle(obj, null)[name];
+            // }
+        }
+    </script>
+</head>
+<body>
+<button id="btn01">点我</button>
+<!--<button id="btn02">查看样式</button>-->
+<div id="box1"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var u1 = document.getElementById("u1");
+
+
+            // 点击按钮后添加超链接
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function () {
+                // 创建li
+                var li = document.createElement("li");
+                li.innerHTML = "<a href=\"javascript:\" class=\"link\">新建超链接</a>";
+                u1.appendChild(li);
+            }
+            /*
+                为每一个超链接都绑定一个单机函数
+                   - 包括通过点击按钮新建的超链接也得有
+             */
+            var allA = document.getElementsByTagName("a");
+            // for (var i = 0; i < allA.length; i++) {
+            //     allA[i].onclick = function () {
+            //         alert("我是a的单击响应")
+            //     }
+            // }
+            /*
+             我们希望只绑定一次事件就能应用到多个元素身上
+                - 尝试将其绑定给元素的共同祖先元素
+
+                此为事件的委派:将事件统一绑定给共同的祖先元素,当后代触发事件,会冒泡给祖先进行事件处理
+             */
+            u1.onclick = function (event) {
+                /*
+                  触发事件的对象必须是我们期望的元素
+                 */
+                event = event || window.event;
+                if (event.target.className === "link") {
+                    alert("我是ul")
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<button id="btn01">添加超链接</button>
+<ul id="u1" style="background-color: #bbffaa">
+    <li><a href="javascript:" class="link">超链接1</a></li>
+    <li><a href="javascript:" class="link">超链接2</a></li>
+    <li><a href="javascript:" class="link">超链接3</a></li>
+</ul>
+</body>
+</html>
