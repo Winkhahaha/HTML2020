@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /*
+                滚轮向下变长,向上变短
+             */
+            var box1 = document.getElementById("box1");
+            // box1绑定鼠标滚轮滚动事件
+            box1.onmousewheel = function (event) {
+                // 判断鼠标滚轮滚动的方向,向上滑正,向下滑负
+                // 向上减去长度,向下增加长度
+                if (event.wheelDelta > 0 || event.detail < 0) {
+                    // alert("up")
+                    box1.style.height = box1.clientHeight - 10 + "px";
+                } else {
+                    box1.style.height = box1.clientHeight + 10 + "px";
+                }
+                // 滚轮滚动时如果有滚动条,滚动条会随之滚动,默认行为需要return false取消
+                event.preventDefault();
+                return false;
+
+            }
+            bind(box1, "DOMMouseScroll", box1.onmousewheel);
+
+            function bind(obj, eventStr, callback) {
+                if (obj.addEventListener) {
+                    // 大部分浏览器兼容的方式
+                    // 如果希望在捕获阶段就触发事件，可以将addEventListener()的第三个参数设置为true
+                    obj.addEventListener(eventStr, callback, true);
+                } else {
+                    /*
+                     * this是谁由调用方式决定
+                     * callback.call(obj)
+                     */
+                    // IE8及以下
+                    obj.attachEvent("on" + eventStr, function () {
+                        //在匿名函数中调用回调函数
+                        callback.call(obj);
+                    });
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box1"></div>
+
+</body>
+</html>

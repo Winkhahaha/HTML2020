@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /*
+                键盘事件一般都会绑定给一些可以获取焦点的对象或者是document对象
+             */
+            // document.onkeydown = function (event) {
+            //     // 判断哪个键被按下
+            //     alert(event.keyCode);
+            //     // 判断y和ctrl是否同时被按下
+            //     if (event.keyCode === 89 && event.ctrlKey) {
+            //         console.log("Y被按下")
+            //     }
+            //     console.log("按下")
+            // }
+            // document.onkeyup = function () {
+            //     console.log("松开")
+            // }
+
+            var input = document.getElementsByTagName("input")[0];
+            input.onkeydown = function (event) {
+                console.log("按下了")
+                // 在文本框中不能输入数字
+                // 数字keyCode 48 - 57
+                if (event.keyCode >= 4 && event.keyCode <= 57) {
+                    return false;
+                }
+
+                // 输入内容属于默认行为,可以取消
+                // return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box1"></div>
+<input type="text"/>
+</body>
+</html>
