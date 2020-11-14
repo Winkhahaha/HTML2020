@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /*
+                使图片可以自动切换
+             */
+            var img1 = document.getElementById("img1");
+            // 创建一个数组保存图片路径
+            var imgArr = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg"];
+            // 创建获取图片索引的变量
+            var index = 0;
+            // 绑定按钮事件
+            var btn = document.getElementById("btn");
+            // 定义定时器
+            var timer;
+            btn.onclick = function () {
+                /*
+               开启一个定时器自动切换图片
+                    但是,我们每点击一次就开启一个定时器,而且不能一次关掉
+                        导致图片切换过快,只能关最后的定时器
+                        (上述针对同一个元素)
+                */
+                // 在开启一个定时器之前,需要关闭当前元素的上一个定时器
+                clearInterval(timer);
+                timer = setInterval(function () {
+                    // 使索引自增
+                    index++;
+                    // 判断索引
+                    // if (index >= imgArr.length) {
+                    //     index = 0;
+                    // }
+                    index %= imgArr.length;
+                    img1.src = imgArr[index];
+                }, 500)
+            }
+
+            // btn2绑定事件
+            var btn2 = document.getElementById("btn2");
+            // 点击按钮停止播放
+            btn2.onclick = function () {
+                /*
+                    如果参数是有效定时器,则停止,不是则啥都不干
+                 */
+                clearInterval(timer);
+            }
+
+        }
+    </script>
+</head>
+<body>
+<img src="img/1.jpg" id="img1"/>
+<button id="btn">开始播放</button>
+<button id="btn2">停止播放</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        /*
+         * location:封装了地址栏信息
+         */
+        window.onload = function () {
+            //获取按钮对象
+            var btn = document.getElementById("btn");
+
+            btn.onclick = function () {
+                // alert(location)
+                // 如果直接将location修改为一个完整路径,则页面会自动跳转
+                // location = "https://www.baidu.com/";
+
+                // location.assign("https://www.baidu.com/");
+
+                // 用于重新加载当前页面(刷新),加true强制清空文本框缓存
+                location.reload(true);
+
+                // replace:可以使用新页面替换当前页面,且不能回退
+                location.replace("https://www.baidu.com/");
+
+
+            };
+        };
+
+    </script>
+</head>
+<body>
+<input type="text"/>
+
+<button id="btn">点我一下</button>
+</body>
+</html>

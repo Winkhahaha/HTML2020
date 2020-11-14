@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var btn01 = document.getElementById("btn01");
+            var box1 = document.getElementById("box1");
+            // 定义定时器变量
+            var timer;
+            btn01.onclick = function () {
+                // 首先关闭上一个定时器
+                clearInterval(timer);
+                // 开启定时器执行动动态效果
+                timer = setInterval(function () {
+                    // 获取box1原来的left值
+                    // 只取数字
+                    var oldValue = parseInt(getStyle(box1, "left"));
+                    // 在oldValue基础上增加
+                    var newValue = oldValue + 10;
+                    // 判断newValue是否大于800
+                    if (newValue > 800) {
+                        // 要求稳稳停在800线
+                        newValue = 800;
+                    }
+                    // 将newValue设置给box1
+                    box1.style.left = newValue + "px";
+                    // 当元素移动到800像素时,停止移动
+                    if (newValue === 800) {
+                        // 到达目标,关闭定时器
+                        clearInterval(timer);
+                    }
+                }, 30);
+            }
+
+            function getStyle(obj, name) {
+                return window.getComputedStyle ? getComputedStyle(obj, null)[name] : obj.currentStyle[name];
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btn01">点击按钮以后box1向右移动</button>
+<br/><br/>
+<div id="box1"></div>
+<div style="width: 0; height: 1000px; border-left: 1px black solid; position: absolute;left: 800px;top: 0px"></div>
+</body>
+</html>

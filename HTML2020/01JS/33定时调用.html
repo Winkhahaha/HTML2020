@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var count = document.getElementById("count");
+            // 让count自动切换
+            // for (var i = 0; i < 10; i++) {
+            //     count.innerHTML = i;
+            // }
+            /*
+               如果希望一段程序可以每间隔一段时间执行一次,可以使用定时
+               setInterval():
+                定时调用
+                    参数:
+                        1.回调函数
+                        2.每次调用间隔的时间/ms
+                    返回值:
+                        返回一个Number类型的数据,作为定时器的唯一标识
+            */
+            var num = 1;
+            var timer = setInterval(function () {
+                count.innerHTML = num++;
+                if (num === 100) {
+                    // 用来关闭指定定时器(传入定时器标识)
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+<h1 id="count">1</h1>
+</html>

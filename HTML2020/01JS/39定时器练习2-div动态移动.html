@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var btn01 = document.getElementById("btn01");
+            var btn02 = document.getElementById("btn02");
+            var box1 = document.getElementById("box1");
+            // 定义定时器变量
+            var timer;
+
+            // 点击btn01向右移动
+            btn01.onclick = function () {
+                move(box1, 800, 10)
+                // // 首先关闭上一个定时器
+                // clearInterval(timer);
+                // // 开启定时器执行动动态效果
+                // timer = setInterval(function () {
+                //     // 获取box1原来的left值
+                //     // 只取数字
+                //     var oldValue = parseInt(getStyle(box1, "left"));
+                //     // 在oldValue基础上增加
+                //     var newValue = oldValue + 10;
+                //     // 判断newValue是否大于800
+                //     if (newValue > 800) {
+                //         // 要求稳稳停在800线
+                //         newValue = 800;
+                //     }
+                //     // 将newValue设置给box1
+                //     box1.style.left = newValue + "px";
+                //     // 当元素移动到800像素时,停止移动
+                //     if (newValue === 800) {
+                //         // 到达目标,关闭定时器
+                //         clearInterval(timer);
+                //     }
+                // }, 30);
+            }
+
+            // 点击btn02从800向左0移动
+            btn02.onclick = function () {
+                move(box1, 0, 10)
+            }
+
+            /*
+                创建移动函数
+                obj:要执行动作的元素
+                target:执行动作的目标地点
+                speed:移动的速度(正数向右移动,负数向左移动)
+                    - 传正负不好,只传正值!
+             */
+            function move(obj, target, speed) {
+                // 首先关闭上一个定时器
+                clearInterval(timer);
+                // 获取元素当前位置
+                var current = parseInt(getStyle(obj, "left"));
+                /*
+                    判断速度的正负值
+                        0-->800,speed正
+                        800-->0,speed负
+                 */
+                if (current > target) {
+                    // 比如当前800,目标是0
+                    speed = -speed;
+                }
+                // 开启定时器执行动动态效果
+                timer = setInterval(function () {
+                    // 获取box1原来的left值
+                    // 只取数字
+                    var oldValue = parseInt(getStyle(obj, "left"));
+                    // 在oldValue基础上增加
+                    var newValue = oldValue + speed;
+                    // 向左移动,需要判断newValue是否小于target
+                    if ((speed < 0 && newValue < target) ||
+                        // 向右移动,需要判断newValue是否大于target
+                        (speed > 0 && newValue > target)) {
+                        newValue = target;
+                    }
+                    // 将newValue设置给box1
+                    obj.style.left = newValue + "px";
+                    // 无论向左向右,最终都停在指定target位置
+                    if (newValue === target) {
+                        // 到达目标,关闭定时器
+                        clearInterval(timer);
+                    }
+                }, 30);
+            }
+
+            // 获取指定元素的样式
+            function getStyle(obj, name) {
+                return window.getComputedStyle ? getComputedStyle(obj, null)[name] : obj.currentStyle[name];
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btn01">点击按钮以后box1向右移动</button>
+<button id="btn02">点击按钮以后box1向左移动</button>
+<br/><br/>
+<div id="box1"></div>
+<div style="width: 0; height: 1000px; border-left: 1px black solid; position: absolute;left: 800px;top: 0px"></div>
+</body>
+</html>
