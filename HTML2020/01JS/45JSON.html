@@ -6,7 +6,12 @@
     <style>
 
     </style>
+    <script type="text/javascript" src="js/json2.js"></script>
     <script type="text/javascript">
+        /*
+                JSON对象在IE7及其以下不支持
+                    如果需要兼容,引入外部文件js/json2.js
+             */
         window.onload = function () {
             /*
                 js中的对象只有js认识
@@ -40,10 +45,6 @@
             var obj3 = {name: "张三", age: 28};
             var json1 = JSON.stringify(obj3);
             alert(json1);
-
-            /*
-                JSON对象在IE7及其以下不支持
-             */
         }
     </script>
 </head>
