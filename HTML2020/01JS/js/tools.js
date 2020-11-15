@@ -64,3 +64,53 @@ function getStyle(obj, name) {
     }
 
 }
+
+/*
+         定义一个函数用来向一个元素提那家指定的class属性值
+            obj:要添加class属性的元素
+            cn:要添加的class值
+         */
+function addClass(obj, cn) {
+    // 如果obj没有cb这个class值,则给他加上
+    if (!hasClass(obj, cn)) {
+        obj.className += " " + cn;
+    }
+}
+
+/*
+删除一个元素中含有的class值
+* */
+function removeClass(obj, cn) {
+    var reg = new RegExp("\\b" + cn + "\\b");
+    // 如果匹配上cn这个class值,则用空串代替之
+    obj.className = obj.className.replace(reg, "");
+}
+
+/*
+    toggleClass:用来切换一个类
+        如果元素元素中有cn类,删掉
+        如果没有cn类,加之
+* */
+function toggleClass(obj, cn) {
+    // 判断是否含有cn
+    if (hasClass(obj, cn)) {
+        // 有,删除
+        removeClass(obj, cn);
+    } else {
+        // 没有,加之
+        addClass(obj, cn);
+    }
+
+}
+
+/*
+ 判断一个元素是否含有指定的class值
+ 如果有返回true,没有false
+ */
+function hasClass(obj, cn) {
+    // 创建正则表达式
+    // 有cn且cn为独立值
+    // var reg = /\bb2\b/;
+    var reg = new RegExp("\\b" + cn + "\\b");
+    return reg.test(obj.className);
+}

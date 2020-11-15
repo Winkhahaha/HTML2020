@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /*
+                js中的对象只有js认识
+                    如何传递该对象?JSON
+             */
+            // var obj = {"name": "猴子", "age": 18};
+
+            /*
+                JSON:特殊格式字符串,字符串可以被任意的语言所识别
+                    并且可以转换为任意语言中对象,JSON在开发中主要用来数据交互
+                    JSON字符串属性名必须加双引号
+                    分类:
+                        对象{}
+                        数组[]
+             */
+            var obj = '{"name": "猴子", "age": 18}';
+            var arr = '[1,2,3,"hello",true]';
+            var obj2 = '{"arr":[1,2,3]}'
+            // alert(obj.name)
+
+            /*
+                将JSON字符串转换为js对象
+                    在js中,为我们提供了一个工具类就叫JSON
+             */
+            // JSON --> js对象
+            var o = JSON.parse(obj);
+            var arr2 = JSON.parse(arr);
+            alert(o.name + " " + arr2[2])
+
+            // js对象 --> JSON
+            var obj3 = {name: "张三", age: 28};
+            var json1 = JSON.stringify(obj3);
+            alert(json1);
+
+            /*
+                JSON对象在IE7及其以下不支持
+             */
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
