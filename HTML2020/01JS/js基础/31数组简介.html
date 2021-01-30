@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /**
+             * 对象分类:
+             *  1.内建对象:
+             *      由ES标准中定义的对象,在任何ES的实现中都可以使用
+             *  2.宿主对象:
+             *     由JS的运行环境提供的对象,目前主要指右浏览器提供的对象比如BOM/DOM
+             *  3.自定义对象
+             *     开发人员自己创建的对象
+             *
+             *  内建对象:数组Array
+             */
+            var arr = [];
+            arr[0] = 10;
+            arr[1] = 11;
+            alert(arr.length);
+            // arr.length = 10;多余位置空出来
+            alert(arr)
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 创建Person的构造函数,首字母大写
+            // 使用构造函数需要加上new关键字调用
+            // 构造函数每执行一次就会创建一个hello()方法造成内存浪费
+            // 解决办法: 将方法定义在全局(但是污染了全局作用域)
+            // function hello() {
+            //     alert(this.name);
+            // }
+            // 统一添加到构造函数的原型对象中
+
+
+            function Person(name, gender, age) {
+                this.name = name;
+                this.gender = gender;
+                this.age = age;
+            }
+
+            Person.prototype.hello = function () {
+                alert(this.name);
+            }
+
+            var obj = new Person("A", "男", 18);
+            var obj2 = new Person("B", "女", 18);
+            obj.hello();
+            obj2.hello();
+            alert(obj.hello === obj2.hello)
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

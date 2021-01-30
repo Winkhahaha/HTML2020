@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // Math和其他对象不一样,它不是构造函数,属于工具类
+            Math.abs(-1);
+            // ceil: 向上取整(小数位只要有值就进位)
+            alert(Math.ceil(1.5));
+            // floor: 向下取整(小数位只要有值就舍去)
+            alert(Math.floor(1.5));
+            // 四舍五入
+            alert(Math.round(1.5));
+            // 0-1之间的随机数-->0-10的数
+            alert(Math.round(Math.random() * 10));
+            // 1-10
+            alert(Math.round(Math.random() * 9) + 1);
+            // 获取多个数的最大值
+            alert(Math.max(6, 9, 10));
+            // 返回x的y次方
+            alert(Math.pow(2, 3));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            function isOu(num) {
+                return num % 2 === 0;
+            }
+
+            alert(isOu(3));
+
+            function mianji(r) {
+                return 3.14 * r * r;
+            }
+
+            alert(mianji(10));
+
+            // 创建函数输出对象信息
+            var obj = {name: "李四", gender: "女", age: 30};
+
+            function hello(obj) {
+                alert(obj.name + " " + obj.gender + " " + obj.age);
+            }
+
+            hello(obj);
+
+            // 实参可以是函数
+            function fun(a) {
+                console.log(a)
+                a(obj);
+            }
+
+            fun(hello(obj));
+
+            fun(function () {
+                alert("套娃");
+            })
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

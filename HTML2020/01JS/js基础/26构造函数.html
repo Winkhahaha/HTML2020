@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 创建Person的构造函数,首字母大写
+            // 使用构造函数需要加上new关键字调用
+            function Person(name, gender, age) {
+                this.name = name;
+                this.gender = gender;
+                this.age = age;
+                this.hello = function () {
+                    alert(this.name);
+                }
+            }
+
+            var obj = new Person("A", "男", 18);
+            obj.hello();
+            // 使用instanceof检查一个对象是否是某个类的实例
+            alert(obj instanceof Person);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

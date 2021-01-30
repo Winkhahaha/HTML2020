@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /**
+             * 对象分类:
+             *  1.内建对象:
+             *      由ES标准中定义的对象,在任何ES的实现中都可以使用
+             *  2.宿主对象:
+             *     由JS的运行环境提供的对象,目前主要指右浏览器提供的对象比如BOM/DOM
+             *  3.自定义对象
+             *     开发人员自己创建的对象
+             */
+
+            var obj = new Object();
+            // var obj = {};
+            // obj = {name: "李四", gender: "女", age: 30};
+            obj.name = "张三";
+            obj.gender = "女";
+            obj.age = 18;
+            console.log(obj);
+            obj.name = "李四";
+            // 另一种属性赋值方式
+            obj["name"] = "哈哈";
+            alert(obj["name"]);
+            // []的方式比较灵活,可以接收变量
+            var a = "name";
+            alert(obj[a]);
+            a = "gender";
+            alert(obj[a]);
+            // 删除属性
+            // delete obj.name;
+            alert(obj.name + " " + obj.gender + " " + obj.age);
+
+            // in运算符:检查对象是否含有指定的属性
+            alert("name" in obj);
+            alert("id" in obj);
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

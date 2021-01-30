@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var obj = {name: "李四", gender: "女", age: 30};
+            obj.hello = function () {
+                alert(this.name);
+            }
+            obj.hello();
+
+            /**
+             * 使用工厂方法创建对象
+             */
+            function factory(name, gender, age) {
+                var obj = {};
+                obj.name = name;
+                obj.gender = gender;
+                obj.age = age;
+                obj.hello = function () {
+                    alert(this.name);
+                }
+                return obj;
+            }
+
+            var obj2 = factory("张三", "男", 18);
+            obj2.hello();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

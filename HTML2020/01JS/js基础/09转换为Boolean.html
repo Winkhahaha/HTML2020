@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // Number To Boolean 除了0和Nan其余全为true
+            var a = 123;
+            alert(Boolean(a));
+            a = -123;
+            alert(Boolean(a));
+            a = NaN;
+            alert(Boolean(a));
+
+            // String To Boolean 除了空串,null,ndefined,其余都是true
+            a = "true";
+            alert(Boolean(a));
+            a = null;
+            alert(Boolean(a));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

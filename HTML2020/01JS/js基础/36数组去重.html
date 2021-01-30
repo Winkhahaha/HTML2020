@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var arr = [1, 2, 3, "hello", "hello", 3, "hello"];
+            arr = arr.filter((element, index, array) => {
+                return array.indexOf(element) === index;
+            });
+            alert(arr);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 开启计时器
+            console.time("test");
+            // 1-100之间的质数
+            for (var i = 2; i < 100; i++) {
+                // 创建布尔值
+                var flag = true;
+                // Math.sqrt()开方
+                for (var j = 2; j <= Math.sqrt(i); j++) {
+                    // 判断i是否能被j整除
+                    if (i % j === 0) {
+                        // 说明不是质数
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    console.log(i)
+                }
+            }
+            // 终止计时器
+            console.timeEnd("test");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

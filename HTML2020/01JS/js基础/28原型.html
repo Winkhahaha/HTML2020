@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 原型:prototype
+            // 我们所创建的每一个函数,解析器都会向函数添加一个属性prototype
+            // 该属性对应着我们的原型对象
+            // 当以构造函数的方式创建对象时,都会给对象一个隐含的属性_proto_指向构造函数的原型对象
+            // 实例对象._proto_ -> 原型
+
+            function Person() {
+            }
+
+            // 向Person的原型对象添加属性,那么通过构造创建的实例都将拥有该属性(公共的)
+            // 因此当我们访问对象的属性时候,对象会现在自己内部找,如果没有,就去找原型提供的公共属性
+            Person.prototype.a = "哈哈哈";
+            // 我们通过原型为每个实例对象设置公共的方法
+            Person.prototype.hello = function () {
+                alert("你好!");
+            }
+            var obj = new Person();
+            var obj2 = new Person();
+            // alert(obj.a)
+            // alert(obj2.a)
+            alert(obj.hello === obj2.hello);
+            obj.hello();
+            obj2.hello();
+            //alert(obj._proto_ === obj2._proto_);  true
+            // alert(Person.prototype);
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

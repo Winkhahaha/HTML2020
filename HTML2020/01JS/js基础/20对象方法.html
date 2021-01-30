@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var obj = {name: "李四", gender: "女", age: 30};
+            // 对象的属性也可以是个函数,我们称之为对象的方法
+            obj.getName = function () {
+                alert(obj.name);
+            }
+            // 调方法
+            obj.getName();
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

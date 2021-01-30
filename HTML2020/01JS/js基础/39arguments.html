@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 调用函数时,浏览器每次传递两个隐含的参数
+            // arguments是一个类数组对象,通过索引来操作数据,也可以获取长度
+            // 调用函数时,我们传递的实参都会在arguments中保存
+            // arguments.callee:当前正执行的函数对象
+            function fun() {
+                alert(arguments);
+                alert(arguments.callee);
+            }
+
+            fun();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 字面量创建数组
+            function Person(name, gender, age) {
+                this.name = name;
+                this.gender = gender;
+                this.age = age;
+            }
+
+            Person.prototype.toString = function () {
+                return "Person[name=" + this.name + ",age=" + this.age + ",gender=" + this.gender + "]";
+            }
+            var per = new Person("A", "男", 18);
+            var per2 = new Person("B", "女", 38);
+            var per3 = new Person("C", "女", 8);
+            var perArr = [per, per2, per3];
+
+            // 参数 1正在遍历的元素2当前正在遍历的索引3正在遍历的数组
+            perArr.forEach(person => alert(person));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

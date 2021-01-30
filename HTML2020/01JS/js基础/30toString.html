@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            function Person(name, gender, age) {
+                this.name = name;
+                this.gender = gender;
+                this.age = age;
+            }
+
+            Person.prototype.toString = function () {
+                return "Person[name=" + this.name + ",age=" + this.age + ",gender=" + this.gender + "]";
+            }
+            var per = new Person("A", "男", 18);
+            var per2 = new Person("B", "女", 18);
+            alert(per);
+            alert(per2);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

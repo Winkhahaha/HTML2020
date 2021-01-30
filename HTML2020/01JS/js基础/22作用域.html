@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        /**
+         * 作用域:
+         *  1.全局作用域
+         *   - 直接编写在script标签中的JS代码,都在全局作用域,该域在页面打开时创建,关闭时销毁
+         *   - 全局作用域中有一个全局对象Window,由浏览器创建,可以直接使用
+         *   - 在全局作用域中创建的变量都会作为window对象的属性保存
+         *   - 创建的函数都会作为Window对象的方法
+         *  2.函数作用域
+         *   - 调用函数时创建函数作用域,函数执行完毕后作用域销毁,
+         *   每调用异常就会创建一个新的函数作用域,相互独立
+         *   全局作用域不能访问函数作用域的变量,但是函数可以访问全局
+         *   函数先在自己的作用域找变量,没有的话在全局里找,在没有就报错
+         *   函数访问全局变量可以使用window.a
+         */
+        var a = 10;
+
+        function fun() {
+            alert("哈哈")
+        }
+
+        alert(window.a);
+        window.fun();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

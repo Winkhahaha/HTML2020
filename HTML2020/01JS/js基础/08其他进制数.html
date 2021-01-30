@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var a = 123;
+            // 16进制
+            a = 0x10;
+            a = 0xff;
+            alert(a)
+            // 8进制
+            a = 0o70;
+            alert(a);
+            // 2进制
+            a = 0b10;
+            alert(a);
+
+            // 字符串
+            a = "070"
+            // 说明a是八进制数
+            alert(Number.parseInt(a, 8));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

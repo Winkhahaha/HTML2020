@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            width: 2000px;
+        }
+
+        span {
+            /*行内块元素*/
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
+    <script type="text/javascript">
+        // 乘法表
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                document.write(`<span>${j} * ${i} = ${i * j}</span>`);
+            }
+            // 输出换行
+            document.write("<br/>")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

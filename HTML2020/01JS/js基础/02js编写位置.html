@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:javascript="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <!--    引入外部文件
+    一旦引入外部文件,则不能在在标签内编写代码,即使编写浏览器也会忽略,除非新建script标签-->
+    <script type="text/javascript" src="../js/script.js">
+        window.onload = function () {
+
+        }
+    </script>
+    <script type="text/javascript">
+        alert("我是内部!")
+    </script>
+</head>
+<body>
+<!--不该写在这,行为与结构耦合-->
+<button onclick="alert('哈哈');">点我</button>
+<a href="javascript:alert('嘿嘿嘿');">连接</a>
+</body>
+</html>

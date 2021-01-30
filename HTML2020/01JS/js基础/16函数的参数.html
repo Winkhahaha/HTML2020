@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /*
+                定义求和函数
+             */
+            function sum(a, b) {
+                alert(a + b)
+            }
+
+            // 函数解析不会检查实参的类型
+            // 所以需要注意参数的合法性
+            // 函数解析不会检查实参的数量,多余参数不会赋值,少于形参数量undefined
+            sum(1, 2);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

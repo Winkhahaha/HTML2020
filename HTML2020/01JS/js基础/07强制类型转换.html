@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var a = 123;
+            // Number To String
+            alert(typeof a.toString());
+            alert(typeof String(a));
+            alert(String(null));
+            a = "123"
+            // String To Number
+            alert(typeof Number(a));
+            alert(typeof Number.parseInt(a));
+            alert(Number(true));
+            alert(Number(false));
+            alert(Number(null));
+            alert(Number(undefined))
+
+            var aa = "123px";
+            // 取出有效整数字符串进行转换
+            alert(Number.parseInt(aa));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            function fun() {
+                alert(this);
+            }
+
+            var obj = {};
+            // call和apply可以将一个对象指定为第一个参数,此时该对象即为函数执行时的this
+            // call方法可以将实参在对象之后一次传递
+            // apply方法需要将实参封装到一个数组中统一传递
+            fun.call(obj);
+            fun.apply(obj);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+
+        /*
+         以函数形式调用this永远是Window
+         以对象方法调用
+         */
+        function fun() {
+            alert(this.name);
+        }
+
+        var obj = {name: "李四", gender: "女", age: 30};
+        obj.hello = fun;
+        obj.hello();
+        // 对象的方法调用对象的name,全局的函数调用全局的name
+        var name = "哈哈哈";
+        fun();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

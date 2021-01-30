@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 字面量创建数组
+            var arr = [1, 2, 3, "hello", null, undefined];
+            // push:向数组末尾添加一个或多个元素,并返回新的数组长度
+            arr.push("push");
+            // pop:删除数组最后一个元素,并将该元素作为值返回
+            alert(arr.pop());
+            // unshift:向数组开头添加一个或多个元素,并返回新的数组长度
+            alert(arr.unshift("哈哈", "你好", 6));
+            alert(arr)
+            // shift:删除数组第一个元素,并将该元素作为值返回
+            alert(arr.shift());
+            // slice:从数组中提取指定元素(不包含结束索引的元素)
+            // 可以传负值,表示倒数第几个
+            alert(arr.slice(0, 3))
+            // splice:删除数组中指定元素(会影响原数组)
+            // 1参数开始的位置2参数删除的数目3参数及以后,表示删完之后新加入到数组开始位置的元素
+            arr.splice(0, 2, "新元素");
+            var arr2 = [8, 3, 6];
+            //concat()连接数组,并将新数组返回,不影响原数组
+            alert(arr.concat(arr2));
+            // join将数组转为字符串,不影响原数组
+            // 可以指定一个字符串作为参数,该字符串将作为数组元素的连接符(默认,)
+            alert(arr2.join("&"));
+            // reverse:反转数组,影响原数组
+            alert(arr2.reverse());
+            // sort:排序,影响原数组,默认按照Unicode排序
+            // 我们需要指定排序规则
+            // 数组会分别使用a,b形参去调用回调函数
+            // 返回值大于0交换位置,小于0位置不变,等于0认为相同
+            alert(arr2.sort((a, b) => {
+                return a - b;
+            }));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

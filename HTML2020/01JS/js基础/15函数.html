@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 函数也是一个对象
+            // 封装到函数的代码不会立即执行
+            // var fun = new Function("console.log('hello');");
+            function test() {
+                alert("函数");
+            }
+
+            // 函数中的代码会在调用的时候执行
+            test();
+            var fun2 = function () {
+                alert("fun2的函数");
+            }
+            fun2();
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

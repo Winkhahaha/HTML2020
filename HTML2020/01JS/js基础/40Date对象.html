@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var begin = Date.now()
+            var date = new Date(); // 当前代码执行时间
+            // 创建指定的时间对象
+            var d2 = new Date("12/03/2016 11:10:30");
+            // alert(date);
+            // alert(d2);
+            var d3 = date.getDate();
+            // alert(d3);
+            // 返回当前是周几
+            d3 = date.getDay();
+            // alert(d3)
+            // 返回0-11的值,0表示一月
+            d3 = date.getMonth();
+            // alert(d3)
+            d3 = date.getFullYear();
+            // alert(d3)
+            var time = date.getTime();
+            // alert(time / 1000 / 60 / 60 / 24 / 365);
+            // 获取当前时间戳
+            var end = Date.now();
+            alert(end - begin)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

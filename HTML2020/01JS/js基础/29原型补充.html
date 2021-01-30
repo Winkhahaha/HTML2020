@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 原型:prototype
+            // 我们所创建的每一个函数,解析器都会向函数添加一个属性prototype
+            // 该属性对应着我们的原型对象
+            // 当以构造函数的方式创建对象时,都会给对象一个隐含的属性_proto_指向构造函数的原型对象
+
+            function Person() {
+            }
+
+            // 向Person的原型对象添加属性,那么通过构造创建的实例都将拥有该属性(公共的)
+            // 因此当我们访问对象的属性时候,对象会现在自己内部找,如果没有,就去找原型提供的公共属性
+            Person.prototype.name = "原型对象的名字";
+            // 我们通过原型为每个实例对象设置公共的方法
+            Person.prototype.hello = function () {
+                alert("你好!");
+            }
+            var obj = new Person();
+            // 使用in检查对象中是否含有某个属性,如果对象没有但是原型有,仍会返回true
+            alert("name" in obj);       // true
+            // 使用hasOwnProperty检查对象自身是否含有某个属性(排除原型)
+            alert(obj.hasOwnProperty("name"));  // false
+            // 原型对象也是对象,所以它也有原型
+            // 当使用某个对象的属性或方法,现在对象自身找,没有就去原型找,在没有就去原型的原型找,
+            // 直到找到Object对象的原型,但Object没有原型,因此Object中没有找到则返回undefined
+            alert(obj._proto_);
+            alert(obj._proto_._proto_);
+
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

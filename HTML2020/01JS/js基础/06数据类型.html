@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /*
+               字面量的类型:
+                    String: 引号不能嵌套,可以使用\作为转译符表示特殊符号
+                    \": "
+                    \': '
+                    \n : 换行
+                    \t : 制表符
+                    \\ : \
+                    Number
+                    Boolean
+                    Null
+                    Undefined
+                    Object(引用数据类型)
+             */
+            var str = "我说:'hello'";
+            str = "我说:\n\"你好\"";
+            alert(str)
+            // -----------------Number--------------------
+            var a = 123;
+            a = 1.5;
+            alert(a);
+            // 检查类型
+            alert(typeof a);
+            alert(Number.MAX_VALUE);
+            // JS使用浮点数计算可能返回不精确结果
+            alert(0.1 + 0.2);
+            // -----------------Boolean--------------------
+            alert(3 > 5);
+            // -----------------Null--------------------
+            alert(typeof null); // Object
+            // -----------------Undefined--------------------
+            alert(typeof undefined); // Undefined
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
