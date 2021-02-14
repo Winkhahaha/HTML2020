@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 形参的初始值
+            function add(a, b, c = 6) {
+                return a + b + c;
+            }
+
+            alert(add(1, 2));
+
+            // 与解构值结合
+            function connect({host, name}) {
+                alert(host + " " + name);
+            }
+
+            connect({
+                host: 'localhost',
+                username: 'root'
+            })
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

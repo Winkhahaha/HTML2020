@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // rest参数用于获取函数的实参用来代替arguments
+            // 类型是数组
+            // rest参数必须放到参数列表最后
+            function date(...args) {
+                alert(args);
+            }
+
+            date('a', 'b', 'c');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

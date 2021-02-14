@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            function send(url) {
+                return new Promise((resolve, reject) => {
+                    const x = new XMLHttpRequest();
+                    x.open('GET', url);
+                    x.send();
+                    x.onreadystatechange = function () {
+                        if (x.readyState === 4) {
+                            if (x.status >= 200 && x.status < 300) {
+                                resolve(x.response);
+                            } else {
+                                reject(x.status);
+                            }
+                        }
+                    }
+                });
+
+            }
+
+            // let promise = send("https://api.apiopen.top/getJoke").then(value => {
+            //     alert(value);
+            // }, reason => {
+            // });
+            // alert(promise);
+
+            // 使用async
+            async function main() {
+                let result = await send("https://api.apiopen.top/getJoke");
+                alert(result);
+            }
+
+            main();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

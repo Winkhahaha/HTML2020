@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 用户数据 订单数据 商品数据
+            function getUsers() {
+                setTimeout(() => {
+                    let data = '用户数据';
+                    iterator.next(data);
+                }, 1000);
+            }
+
+            function getOrders() {
+                setTimeout(() => {
+                    let data = '订单数据';
+                    iterator.next(data);
+                }, 1000);
+            }
+
+            function getGoods() {
+                setTimeout(() => {
+                    let data = '商品数据';
+                    iterator.next(data);
+                }, 1000);
+            }
+
+            function* gen() {
+                let users = yield getUsers();
+                alert(users);
+                let orders = yield getOrders();
+                alert(orders);
+                let goods = yield getGoods();
+                alert(goods);
+            }
+
+            gen().next();
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

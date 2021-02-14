@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            const o = {
+                name: 'aaa',
+                age: '18'
+            }
+            alert(Object.keys(o));
+            alert(Object.values(o));
+
+            // entries创建map
+            // 对象变为map
+            const m = new Map(Object.entries(o));
+            alert(m.get('name'));
+            // 对象属性的描述对象
+            // alert(Object.getOwnPropertyDescriptors(o));
+
+            // es10
+            // 逆运算为对象
+            let entries = Object.fromEntries(m);
+            console.log(entries);
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

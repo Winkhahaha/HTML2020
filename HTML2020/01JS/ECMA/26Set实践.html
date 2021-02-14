@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let arr = ['2', '6', '8', '8', '10']
+            let s = new Set();
+            // 1.数组去重
+            let result = [...new Set(arr)];
+            // alert(result);
+
+            // 2.交集
+            let arr2 = ['2', '8'];
+            let jiao = [...new Set(arr)].filter(value => new Set(arr2).has(value));
+            // alert(jiao);
+
+            // 3.并集
+            let arr3 = ['3', '5', '7'];
+            let bing = [...new Set([...arr, ...arr3])];
+            // alert(bing);
+
+            // 4.差集(arr3里面所没有的arr元素)
+            let cha = [...new Set(arr)].filter(value => !(new Set(arr3).has(value)));
+            alert(cha);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

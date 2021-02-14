@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            class Phone {
+
+                constructor(brand, price) {
+                    this._brand = brand;
+                    this._price = price;
+                }
+
+
+                get brand() {
+                    return this._brand;
+                }
+
+                set brand(value) {
+                    this._brand = value;
+                }
+
+                get price() {
+                    return this._price;
+                }
+
+                set price(value) {
+                    this._price = value;
+                }
+
+                call() {
+                    alert(this._brand + '我能打电话' + this._price);
+                }
+
+            }
+
+            let phone = new Phone('Apple', 10000);
+            phone.call();
+            phone.brand = 'H'
+            alert(phone.brand);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

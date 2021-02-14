@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 异步编程 1s后 111
+            // 2s后 222
+            // 3s后 333
+            setTimeout(() => {
+                alert(111);
+                setTimeout(() => {
+                    alert(222);
+                    setTimeout(() => {
+                        alert(333);
+                    }, 3000);
+                }, 2000);
+            }, 1000);
+
+            function one() {
+                setTimeout(() => {
+                    alert(1);
+                    iterator.next();
+                }, 1000);
+            }
+
+            function two() {
+                setTimeout(() => {
+                    alert(2);
+                    iterator.next();
+                }, 1000);
+            }
+
+            function three() {
+                setTimeout(() => {
+                    alert(3);
+                    iterator.next();
+                }, 1000);
+            }
+
+            function* gen() {
+                yield one();
+                yield two();
+                yield three();
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

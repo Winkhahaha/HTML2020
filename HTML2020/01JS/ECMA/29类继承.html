@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            class Phone {
+                constructor(brand, price) {
+                    this.brand = brand;
+                    this.price = price;
+                }
+
+                call() {
+                    alert(this.brand + '我能打电话' + this.price);
+                }
+            }
+
+            class SmartPhone extends Phone {
+
+                constructor(brand, price, color) {
+                    super(brand, price);
+                    this.color = color;
+                }
+
+                call() {
+                    alert(this.brand + '^' + this.color + this.price)
+                }
+            }
+
+            new SmartPhone('Apple', 10000, 'white').call();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

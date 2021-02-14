@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        const p = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                let data = '用户数据';
+                resolve(data);
+                // reject('error!')
+            }, 1000);
+        });
+        // 调用promise对象的then方法
+        p.then(function (value) {
+            // 执行成功,调用resolve,执行该回调函数
+            alert(value);
+        }, function (reason) {
+            // 执行失败,调用reject,执行该回调函数
+            alert(reason);
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

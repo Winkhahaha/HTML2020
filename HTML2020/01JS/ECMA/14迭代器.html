@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            const a = ['a', 'b', 'c', 'd']
+            // for (const element of a) {
+            //     alert(element);
+            // }
+            var iterate = a[Symbol.iterator];
+            const b = {
+                name: 'a',
+                stus: [
+                    'aa',
+                    'bb',
+                    'cc'
+                ],
+                [Symbol.iterator]() {
+                    let index = 0;
+                    let _this = this;
+                    return {
+                        next: function () {
+                            if (index < _this.stus.length) {
+                                const result = {value: _this.stus[index], done: false};
+                                index++;
+                                return result;
+                            } else {
+                                return {value: undefined, done: true};
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            for (const bElement of b) {
+                alert(bElement);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

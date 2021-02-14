@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let str = `
+            <ul>
+                <li>
+                    <a>哈哈哈</a>
+                    <p>明天</p>
+                </li>
+                <li>
+                    <a>嘿嘿嘿</a>
+                    <p>后天</p>
+                </li>
+            </ul>`;
+            const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs;
+            for (let result of str.matchAll(reg)) {
+                alert(result);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

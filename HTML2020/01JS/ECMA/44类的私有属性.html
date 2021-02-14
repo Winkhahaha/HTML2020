@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            class Phone {
+                // 私有属性
+                #person;
+
+                constructor(brand, price, person) {
+                    this.brand = brand;
+                    this.price = price;
+                    this.#person = person;
+                }
+
+                call() {
+                    alert(this.brand + '我能打电话' + this.price + "=" + this.#person);
+                }
+            }
+
+            let phone = new Phone('Apple', 10000, '我');
+            phone.call();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            class Person {
+                static [Symbol.hasInstance]() {
+                    alert("我被创建")
+                }
+            }
+
+            let o = {};
+            alert(o instanceof Person);
+            const arr = [1, 2, 3];
+            const arr2 = [4, 5, 6];
+            // 禁止arr2数组展开
+            arr2[Symbol.isConcatSpreadable] = false;
+            alert(arr.concat(arr2));
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

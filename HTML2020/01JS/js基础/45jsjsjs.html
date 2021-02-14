@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        function Receptionist() {
+            this.personMap = new Map();
+            Receptionist.prototype.register = async function (arg) {
+                this.isStandardPerson(arg);
+                this.isExitPerson(arg.id);
+                const person = {};
+                person.id = arg.id;
+                person.name = arg.name;
+                this.personMap.set(person.id, person);
+            }
+            Receptionist.prototype.getPerson = function (id) {
+                let person = this.personMap.get(id);
+                if (person instanceof Object) {
+                    return person;
+                }
+                throw new Error('Person not found');
+
+            }
+            Receptionist.prototype.isExitPerson = function (id) {
+                this.personMap.forEach((value, key) => {
+                    if (key === id) {
+                        throw new Error('Person already exist');
+                    }
+                });
+            }
+
+            this.isStandardPerson = function (arg) {
+                if (arg === undefined || arg === null || arg.id === undefined || arg.name === undefined) {
+                    throw new Error('Invalid person');
+                }
+            }
+        }
+
+        const receptionist = new Receptionist();
+        receptionist.register({id: 1, name: 'Kurosaki Ichigo'});
+        receptionist.register({id: 1, name: 'Kurosaki'});
+        alert(receptionist.getPerson(1).name)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

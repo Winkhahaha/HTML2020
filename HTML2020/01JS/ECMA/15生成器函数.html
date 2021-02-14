@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            function* gen() {
+                alert(1);
+                // yield算作函数代码的分隔符
+                yield '一只没有耳朵';
+                alert(2);
+                yield '一只没有尾巴';
+            }
+
+            alert(gen().next());
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

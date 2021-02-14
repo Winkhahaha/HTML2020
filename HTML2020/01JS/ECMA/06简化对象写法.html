@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let name = 'aa';
+            let change = function () {
+                alert("哈哈");
+            }
+            // es6允许直接把变量写入对象块
+            const person = {
+                name,
+                change,
+                hello() {
+                    alert("嘿嘿嘿");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

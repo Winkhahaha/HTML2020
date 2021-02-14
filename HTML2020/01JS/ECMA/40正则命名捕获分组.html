@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let str = '<a href="https://www.baidu.com">百度</a>'
+            // 提取url与标签文本
+            let reg = /<a href="(.*)">(.*)<\/a>/
+            alert(reg.exec(str)[1]);
+            alert(reg.exec(str)[2]);
+
+            // 新特性
+            reg = /<a href="(?<url>.*)">(?<text>.*)<\/a>/
+            let exec = reg.exec(str);
+            alert(exec.groups.url);
+            alert(exec.groups.text);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

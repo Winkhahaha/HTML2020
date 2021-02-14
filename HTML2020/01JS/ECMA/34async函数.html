@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // async函数返回Promise对象(默认成功)
+            async function fn() {
+                // 如果抛出错误则返回失败的Promise
+            }
+
+            let promise = fn();
+            promise.then(value => {
+                alert(value);
+            }, reason => {
+                alert(reason);
+            });
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

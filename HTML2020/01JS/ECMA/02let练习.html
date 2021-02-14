@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item {
+            border: 1px solid black;
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let item = document.getElementsByClassName('item');
+            // 遍历并绑定事件
+            for (let i = 0; i < item.length; i++) {
+                item[i].onclick = function () {
+                    item[i].style.backgroundColor = 'pink';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2 class="page-header">切换颜色</h2>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+</body>
+</html>

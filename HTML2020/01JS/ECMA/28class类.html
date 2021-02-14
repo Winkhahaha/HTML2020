@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            class Phone {
+
+                // 静态属性
+                static name = '手机'
+
+                constructor(brand, price) {
+                    this.brand = brand;
+                    this.price = price;
+                }
+
+                call() {
+                    alert(this.brand + '我能打电话' + this.price);
+                }
+
+            }
+
+            let phone = new Phone('Apple', 10000);
+            phone.call();
+            alert(Phone.name);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+需求分析这可以再展开写，比如设计用例描述，时序图或协作图，把软件工程的分析方法加进去，系统有哪些实体类，与表如何映射，功能模块直接边界是啥，尽管有工具辅助但实现原理要说明白。
+]Martin Fowler James Lewis.Microservices a definition of this new architectural term [EB/OL].2014-03-25[2020-07-13].https://martinfowler.com/articles/microservices.html.
+在 2014 年，Martin 和 James 两位学者正式提出微服务架构的概念 [1]：微服务架构是一种将单一应用按实际业务模块拆解成多个小粒度、职责单一的领域服务。各领域服务分而治之，服务内部高度自治，通过轻量级机制（如 HTTP、RPC 资源 API）进行通信。在实际应用场景中，积木式的服务既可单独构建，也可围绕业务功能组合构建，从而达到快速交付、满足需求的目的。
+        return first == 13 ? 0 : second == 13 ? first : third == 13 ? first + second : first + second + third;
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            function* gen(arg) {
+                alert(arg);
+                // yield算作函数代码的分隔符
+                yield 111;
+                yield 222;
+                yield 333;
+            }
+
+            alert(gen().next());
+            // next方法可以传入实参并且作为上一次yield的返回结果
+            alert(gen().next('参数'));
+
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

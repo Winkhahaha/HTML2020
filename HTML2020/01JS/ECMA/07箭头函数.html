@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 允许使用=>定义函数
+            let fn = function () {
+
+            }
+            let fn1 = (a, b) => {
+                return a + b;
+            }
+            // alert(fn1(1, 2));
+            // 箭头函数的特性
+            // 1.this是静态的始终指向函数声明时所在作用域下的this的值
+            function getName() {
+                alert(this.name);
+            }
+
+            let getName2 = () => {
+                alert(this.name);
+            }
+            window.name = '张三';
+            const a = {
+                name: '李四';
+            }
+            getName(a);
+            getName2.call(a);
+            // 不能作为构造函数
+            // 不能使用arguments变量
+            // 箭头函数的简写:
+            // 当形参只有一个时省略小括号;
+            // 当代码只有一条语句时省略大括号(此时return必须省略,语句的执行结果就是函数的返回值)
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

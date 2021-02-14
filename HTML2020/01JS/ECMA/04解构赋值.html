@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // ES6允许按照一定模式从数组和对象中提取值,对变量进行赋值
+            // 成为解构赋值
+            // 数组的解构
+            const a = ['aaa', 'bbb', 'ccc'];
+            let [aa, b, c, d] = a;
+            alert(aa);
+            // 对象的解构
+            const bb = {
+                name: '张三',
+                age: '35',
+                hello: function () {
+                    alert("hello")
+                }
+            }
+            let {name, age, hellooo} = bb;
+            alert(name);
+            alert(age);
+            hellooo();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

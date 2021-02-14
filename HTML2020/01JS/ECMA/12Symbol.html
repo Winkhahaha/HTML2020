@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 创建Symbol
+            let s = Symbol();
+            // alert(typeof s);
+            // 构造是标志
+            let s2 = Symbol('学生');
+            let s3 = Symbol.for('学生');
+
+            // 不能与其他数据进行运算
+            // USONB
+            // 作用:给对象添加属性和方法
+            let game = {
+                [Symbol('hello')]: function () {
+
+                }
+            }
+
+            let methods = {
+                up: Symbol(),
+                down: Symbol()
+            };
+            game[methods.up] = function () {
+
+            }
+            game[methods.down] = function () {
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 对象的rest参数和扩展运算符
+            function connect({host, port, ...user}) {
+                // alert(host + ":" + port + user);
+            }
+
+            connect({host: localhost, port: 3306, username: 'root', pwd: 'aaa'});
+
+            const a = {
+                q: '123',
+                w: '456'
+            }
+            const b = {...a}
+            alert(b.q)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

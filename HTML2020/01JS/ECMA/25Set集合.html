@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let s = new Set();
+            // 自动去重
+            let s2 = new Set(['2', '6', '8', '8', '10']);
+            // alert(s2);
+            // 元素个数
+            alert(s2.size);
+            s2.add('100');
+            s2.delete('100');
+            // 检测有没有
+            s2.has('100');
+            // 清空集合
+            s2.clear();
+            for (let v of s2) {
+                alert(v)
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

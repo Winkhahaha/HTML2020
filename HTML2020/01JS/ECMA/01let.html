@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 1.let变量不能重复声明
+            // 2.块级作用域 全局 函数 eval
+            // 3.不存在变量提升(声明之前使用)
+            // 4.不影响作用域链
+            {
+                let school = 'hhh';
+
+                function f() {
+                    alert(school);
+                }
+            }
+            f();
+            let a;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

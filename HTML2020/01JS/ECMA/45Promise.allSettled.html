@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            const p1 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('商品数据');
+                }, 1000);
+            });
+            const p2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    reject('订单数据');
+                }, 1000);
+            });
+            const result = Promise.allSettled([p1, p2]);
+            alert(result);
+            const result2 = Promise.all([p1, p2]);
+            alert(result2);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

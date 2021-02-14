@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            let str = 'JS5211314你好不好666哈哈哈';
+            // 正向断言
+            let reg = /\d+(?=哈)/
+            alert(reg.exec(str));
+
+            // 反向断言
+            reg = /(?<=好)\d+/;
+            alert(reg.exec(str));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

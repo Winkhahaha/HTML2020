@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // Obejct.is两个值是否完全相等
+            Object.is(120, 120);
+            // assign对象合并
+            const a = {
+                host: 'localhost'
+            };
+            const b = {
+                port: 3306
+            };
+            // b覆盖a
+            Object.assign(a, b);
+            // 设置原型对象
+            // b设置为a的
+            Object.setPrototypeOf(a, b);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
