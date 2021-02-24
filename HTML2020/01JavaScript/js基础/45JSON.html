@@ -6,7 +6,7 @@
     <style>
 
     </style>
-    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="../../05Dom/js/json2.js"></script>
     <script type="text/javascript">
         /*
                 JSON对象在IE7及其以下不支持
@@ -45,6 +45,19 @@
             var obj3 = {name: "张三", age: 28};
             var json1 = JSON.stringify(obj3);
             alert(json1);
+
+            let users = [
+                {name: 'John', age: 34},
+                {name: 'Amy', age: 20},
+                {name: 'camperCat', age: 10}
+            ];
+            users = users.map(user => {
+                let result = {};
+                result.a = user.age;
+                result.b = user.name;
+                return result;
+            });
+            console.log(users);
         }
     </script>
 </head>

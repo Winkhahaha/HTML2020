@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var s = [23, 65, 98, 5];
+            // 自定义map()方法
+            Array.prototype.myMap = function (callback) {
+                var newArray = [];
+                for (var i = 0; i < this.length; i++) {
+                    alert('当前正在处理的数组:'+this + "\n当前正在处理的元素" + this[i] + "\n当前正在处理的元素的下标" + i + "\n" + this)
+                    newArray.push(callback.call(this, this[i], i, this));
+                }
+                return newArray;
+            };
+
+            var new_s = s.myMap(item => item * 2);
+            alert(new_s)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
