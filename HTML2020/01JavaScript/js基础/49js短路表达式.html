@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            // &&: 左边的值布尔转换后为true，那么返回右边的值
+            //     左边的值布尔转换后为false，那么返回左边的值
+            var a = 1 && 2;
+            alert(a);
+            a = false && 2;
+            alert(a);
+
+            // ||: 左边的值布尔转换后为false，那么返回右边的值
+            //     左边的值布尔转换后为true，那么返回左边的值
+            a = '' || 2;
+            alert(a);
+            a = 2 || '';
+            alert(a)
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
